@@ -38,7 +38,7 @@ MSE_inv<- data.frame(nealmon_ur = rep(NA, 3), nbeta_ur = rep(NA, 3), nealmon_wei
 ################## ВВП #####################
 ########## NEALMON_UR ##############
 
-#мы в 3 месяце квартала (марте). 
+#мы в 3 месяце квартала 
 set1 <- expand_weights_lags(
   weights = c("nealmon"), 
   from = 3, to = c(8,11), m = 1, 
@@ -65,7 +65,7 @@ n <- which.min(avf_n_ur_1$accuracy$individual$MSE.in.sample)
 MSE_GDP$nealmon_ur[1] <- avf_n_ur_1$accuracy$individual$MSE.out.of.sample[n]
 MSE_GDP$nealmon_weight[1] <- avf_n_ur_1$accuracy$average[1,2]
 
-#мы во 2 месяце квартала (февраль). 
+#мы во 2 месяце квартала 
 set2 <- expand_weights_lags(
   weights = c("nealmon"), 
   from = 4, to = c(9,12), m = 1, 
@@ -92,7 +92,7 @@ MSE_GDP$nealmon_ur[2] <- avf_n_ur_2$accuracy$individual$MSE.out.of.sample[n2]
 MSE_GDP$nealmon_weight[2] <- avf_n_ur_2$accuracy$average[1,2]
 
 
-#мы в 1 месяце квартала (январь). 
+#мы в 1 месяце квартала
 set3 <- expand_weights_lags(
   weights = c("nealmon"), 
   from = 5, to = c(10,13), m = 1, 
@@ -121,7 +121,7 @@ MSE_GDP$nealmon_weight[3] <- avf_n_ur_3$accuracy$average[1,2]
 ############################## NBETA ##############################
 
 
-#мы в 3 месяце квартала (марте). 
+#мы в 3 месяце квартала
 beta_set1 <- expand_weights_lags(
   weights = c("nbeta"), 
   from = 3, to = c(8,11), m = 1, 
@@ -148,7 +148,7 @@ beta_n <- which.min(avf_b_ur_1$accuracy$individual$MSE.in.sample)
 MSE_GDP$nbeta_ur[1] <- avf_b_ur_1$accuracy$individual$MSE.out.of.sample[beta_n]
 MSE_GDP$nbeta_weight[1] <- avf_b_ur_1$accuracy$average[1,2]
 
-#мы во 2 месяце квартала (февраль). 
+#мы во 2 месяце квартала
 beta_set2 <- expand_weights_lags(
   weights = c("nbeta"), 
   from = 4, to = c(9,12), m = 1, 
@@ -175,7 +175,7 @@ MSE_GDP$nbeta_ur[2] <- avf_b_ur_2$accuracy$individual$MSE.out.of.sample[beta_n2]
 MSE_GDP$nbeta_weight[2] <- avf_b_ur_2$accuracy$average[1,2]
 
 
-#мы в 1 месяце квартала (январь). 
+#мы в 1 месяце квартала 
 beta_set3 <- expand_weights_lags(
   weights = c("nbeta"), 
   from = 5, to = c(10,13), m = 1, 
@@ -212,7 +212,7 @@ cpi_tr = cpi[1:234]
 oil_tr = oil[1:234]
 trend_tr = 1:78
 
-#мы в 3 месяце квартала (марте).
+#мы в 3 месяце квартала 
 ur_models1 <- list()
 future1 <- list()
 mse_in1 <- c()
@@ -237,7 +237,7 @@ for (i1 in 1:4){
 
 MSE_GDP$step_weight[1] <- mse_out1[which.min(mse_in1)]
 
-#мы вo 2 месяце квартала (февраль).
+#мы вo 2 месяце квартала 
 ur_models2 <- list()
 future2 <- list()
 mse_in2 <- c()
@@ -264,7 +264,7 @@ ur_models2[[34]]
 MSE_GDP$step_weight[2] <- mse_out2[which.min(mse_in2)]
 
 
-#мы в 1 месяце квартала (январь).
+#мы в 1 месяце квартала 
 
 ur_models3 <- list()
 future3 <- list()
@@ -315,7 +315,7 @@ for (i in 2:5){
   data_1[78,i] <- hf_data[ 232,i]
 }
 
-#мы в 3 месяце квартала (марте).
+#мы в 3 месяце квартала
 ta_models1 <- list()
 ta_future1 <- list()
 ta_mse_in1 <- c()
@@ -340,7 +340,7 @@ for (i1 in 1:2){
 }
 MSE_GDP$time_av[1] <- ta_mse_out1[which.min(ta_mse_in1)]
 
-#мы во 2 месяце квартала (феврале).
+#мы во 2 месяце квартала 
 
 ta_models2 <- list()
 ta_future2 <- list()
@@ -366,7 +366,7 @@ for (i1 in 1:2){
 }
 MSE_GDP$time_av[2] <- ta_mse_out2[which.min(ta_mse_in2)]
 
-#мы в 1 месяце квартала (январе).
+#мы в 1 месяце квартала 
 
 
 ta_models3 <- list()
@@ -415,7 +415,7 @@ write.csv(MSE_GDP, "MSE_GDP.csv")
 #################### Инвестиции ##################################
 ########## NEALMON_UR ##############
 
-#мы в 3 месяце квартала (марте). 
+#мы в 3 месяце квартала 
 inv_set1 <- expand_weights_lags(
   weights = c("nealmon"), 
   from = 3, to = c(8,11), m = 1, 
@@ -442,7 +442,7 @@ inv_n <- which.min(inv_avf_n_ur_1$accuracy$individual$MSE.in.sample)
 MSE_inv$nealmon_ur[1] <- inv_avf_n_ur_1$accuracy$individual$MSE.out.of.sample[inv_n]
 MSE_inv$nealmon_weight[1] <- inv_avf_n_ur_1$accuracy$average[1,2]
 
-#мы во 2 месяце квартала (февраль). 
+#мы во 2 месяце квартала
 set2 <- expand_weights_lags(
   weights = c("nealmon"), 
   from = 4, to = c(9,12), m = 1, 
@@ -469,7 +469,7 @@ MSE_inv$nealmon_ur[2] <- inv_avf_n_ur_2$accuracy$individual$MSE.out.of.sample[in
 MSE_inv$nealmon_weight[2] <- inv_avf_n_ur_2$accuracy$average[1,2]
 
 
-#мы в 1 месяце квартала (январь). 
+#мы в 1 месяце квартала  
 set3 <- expand_weights_lags(
   weights = c("nealmon"), 
   from = 5, to = c(10,13), m = 1, 
@@ -498,7 +498,7 @@ MSE_inv$nealmon_weight[3] <- inv_avf_n_ur_3$accuracy$average[1,2]
 ############################## NBETA ##############################
 
 
-#мы в 3 месяце квартала (марте). 
+#мы в 3 месяце квартала 
 beta_set1 <- expand_weights_lags(
   weights = c("nbeta"), 
   from = 3, to = c(8,11), m = 1, 
@@ -525,7 +525,7 @@ inv_beta_n <- which.min(inv_avf_b_ur_1$accuracy$individual$MSE.in.sample)
 MSE_inv$nbeta_ur[1] <- inv_avf_b_ur_1$accuracy$individual$MSE.out.of.sample[inv_beta_n]
 MSE_inv$nbeta_weight[1] <- inv_avf_b_ur_1$accuracy$average[1,2]
 
-#мы во 2 месяце квартала (февраль). 
+#мы во 2 месяце квартала  
 beta_set2 <- expand_weights_lags(
   weights = c("nbeta"), 
   from = 4, to = c(9,12), m = 1, 
@@ -552,7 +552,7 @@ MSE_inv$nbeta_ur[2] <- avf_b_ur_2$accuracy$individual$MSE.out.of.sample[beta_n2]
 MSE_inv$nbeta_weight[2] <- avf_b_ur_2$accuracy$average[1,2]
 
 
-#мы в 1 месяце квартала (январь). 
+#мы в 1 месяце квартала 
 beta_set3 <- expand_weights_lags(
   weights = c("nbeta"), 
   from = 5, to = c(10,13), m = 1, 
@@ -589,7 +589,7 @@ cpi_tr = cpi[1:234]
 oil_tr = oil[1:234]
 trend_tr = 1:78
 
-#мы в 3 месяце квартала (марте).
+#мы в 3 месяце квартала 
 inv_ur_models1 <- list()
 inv_future1 <- list()
 inv_mse_in1 <- c()
@@ -614,7 +614,7 @@ for (i1 in 1:4){
 
 MSE_inv$step_weight[1] <- inv_mse_out1[which.min(inv_mse_in1)]
 
-#мы вo 2 месяце квартала (февраль).
+#мы вo 2 месяце квартала 
 inv_ur_models2 <- list()
 inv_future2 <- list()
 inv_mse_in2 <- c()
@@ -640,7 +640,7 @@ for (i1 in 1:4){
 MSE_inv$step_weight[2] <- inv_mse_out2[which.min(inv_mse_in2)]
 
 
-#мы в 1 месяце квартала (январь).
+#мы в 1 месяце квартала 
 
 inv_ur_models3 <- list()
 inv_future3 <- list()
@@ -693,7 +693,7 @@ for (i in 2:5){
   inv_data_1[78,i] <- hf_data[ 232,i]
 }
 
-#мы в 3 месяце квартала (марте).
+#мы в 3 месяце квартала 
 inv_ta_models1 <- list()
 inv_ta_future1 <- list()
 inv_ta_mse_in1 <- c()
@@ -718,7 +718,7 @@ for (i1 in 1:2){
 }
 MSE_inv$time_av[1] <- inv_ta_mse_out1[which.min(inv_ta_mse_in1)]
 
-#мы во 2 месяце квартала (феврале).
+#мы во 2 месяце квартала
 
 inv_ta_models2 <- list()
 inv_ta_future2 <- list()
@@ -744,7 +744,7 @@ for (i1 in 1:2){
 }
 MSE_inv$time_av[2] <- inv_ta_mse_out2[which.min(inv_ta_mse_in2)]
 
-#мы в 1 месяце квартала (январе).
+#мы в 1 месяце квартала 
 
 
 inv_ta_models3 <- list()
