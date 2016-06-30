@@ -1,15 +1,13 @@
 \documentclass[a4paper, 14pt]{extarticle}
 
 
-\usepackage{etex} % расширение классического tex
-\usepackage{cmap} % для поиска русских слов в pdf
+%\usepackage{etex} % расширение классического tex
+%\usepackage{cmap} % для поиска русских слов в pdf
 \usepackage{verbatim} % для многострочных комментариев
 \usepackage{makeidx} % для создания предметных указателей
 
 
-%\usepackage[T2A]{fontenc}
-%\usepackage[utf8]{inputenc} % задание utf8 кодировки исходного tex файла
-%\usepackage[russian, british]{babel} % выбор языка для документа
+
 
 
 \usepackage{fontspec}
